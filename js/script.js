@@ -155,3 +155,31 @@ resizeCanvas();
 createParticles();
 drawParticles();
 typeName();
+
+const aboutContent = document.querySelector(".about__content");
+let aboutScrollFrame = null;
+
+function updateAboutWidth() {
+  aboutScrollFrame = null;
+  if (!aboutContent) return;
+
+  const section = aboutContent.closest(".about");
+  const bounds = section.getBoundingClientRect();
+  const viewportProgress = (window.innerHeight - bounds.top) / window.innerHeight;
+  const progress = Math.min(1, Math.max(0, viewportProgress));
+  const availableWidth = section.clientWidth;
+  const startingWidth = Math.min(780, availableWidth);
+  const currentWidth =
+    startingWidth + (availableWidth - startingWidth) * progress;
+
+  aboutContent.style.maxWidth = `${currentWidth}px`;
+}
+
+function requestAboutWidthUpdate() {
+  if (aboutScrollFrame !== null) return;
+  aboutScrollFrame = requestAnimationFrame(updateAboutWidth);
+}
+
+window.addEventListener("scroll", requestAboutWidthUpdate, { passive: true });
+window.addEventListener("resize", requestAboutWidthUpdate);
+updateAboutWidth();
