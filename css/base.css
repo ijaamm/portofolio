@@ -1,0 +1,21 @@
+:root {
+  --primary: #2563eb;
+  --secondary: #172033;
+  --background: #f8fafc;
+  --muted: #64748b;
+  --border: #e2e8f0;
+  --font-heading: Georgia, "Times New Roman", serif;
+  --font-body: Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--background);
+  color: var(--secondary);
+  font-family: var(--font-body);
+}

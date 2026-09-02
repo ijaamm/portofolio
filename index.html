@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -12,24 +12,37 @@
       <nav class="navbar" aria-label="Navigasi utama">
         <a class="navbar__brand" href="#beranda">Portofolio</a>
 
+        <input
+          type="checkbox"
+          id="nav-toggle"
+          class="navbar__toggle"
+          aria-label="Buka menu"
+        />
+        <label for="nav-toggle" class="navbar__toggle-label" aria-hidden="true">
+          <span></span>
+          <span></span>
+        </label>
+
         <ul class="navbar__links">
           <li><a href="#beranda">Beranda</a></li>
+          <li><a href="#tentang">Tentang</a></li>
+          <li>
+            <details class="contact-dropdown">
+              <summary>Kontak</summary>
+              <ul>
+                <li><a href="mailto:ijammusyaf@gmail.com">Email</a></li>
+                <li>
+                  <a
+                    href="https://wa.me/6281291605094"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >WhatsApp</a
+                  >
+                </li>
+              </ul>
+            </details>
+          </li>
         </ul>
-
-        <details class="contact-dropdown">
-          <summary>Kontak</summary>
-          <ul>
-            <li><a href="mailto:ijammusyaf@gmail.com">Email</a></li>
-            <li>
-              <a
-                href="https://wa.me/6281291605094"
-                target="_blank"
-                rel="noopener noreferrer"
-                >WhatsApp</a
-              >
-            </li>
-          </ul>
-        </details>
       </nav>
     </header>
 
