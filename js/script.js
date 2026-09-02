@@ -1,10 +1,53 @@
 const canvas = document.querySelector(".hero__particles");
 const hero = document.querySelector(".hero");
 const context = canvas.getContext("2d");
+const heroCopy = document.querySelector(".hero__copy");
 const pointer = { x: null, y: null, smoothX: null, smoothY: null };
 const particles = [];
+const typingLines = document.querySelectorAll(".typing-line");
 let width = 0;
 let height = 0;
+
+function typeName() {
+  const reducedMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)",
+  ).matches;
+
+  if (reducedMotion) {
+    typingLines.forEach((line) => {
+      line.textContent = line.dataset.text;
+    });
+    heroCopy.classList.add("is-name-typed");
+    return;
+  }
+
+  let lineIndex = 0;
+  let characterIndex = 0;
+
+  function typeNextCharacter() {
+    const line = typingLines[lineIndex];
+    line.classList.add("is-typing");
+    line.textContent = line.dataset.text.slice(0, characterIndex);
+    characterIndex += 1;
+
+    if (characterIndex <= line.dataset.text.length) {
+      setTimeout(typeNextCharacter, 95);
+      return;
+    }
+
+    line.classList.remove("is-typing");
+    lineIndex += 1;
+    characterIndex = 0;
+
+    if (lineIndex < typingLines.length) {
+      setTimeout(typeNextCharacter, 180);
+    } else {
+      heroCopy.classList.add("is-name-typed");
+    }
+  }
+
+  typeNextCharacter();
+}
 
 function resizeCanvas() {
   const scale = window.devicePixelRatio || 1;
@@ -17,7 +60,7 @@ function resizeCanvas() {
 
 function createParticles() {
   particles.length = 0;
-  const count = window.innerWidth < 640 ? 70 : 150;
+  const count = window.innerWidth < 640 ? 100 : 230;
 
   for (let index = 0; index < count; index += 1) {
     particles.push({
@@ -27,7 +70,7 @@ function createParticles() {
       vy: (Math.random() - 0.5) * 0.35,
       angle: (Math.PI * 2 * index) / count,
       phase: Math.random() * Math.PI * 2,
-      radius: 110 + Math.random() * 260,
+      radius: 150 + Math.random() * 360,
       speed: 0.002 + Math.random() * 0.002,
       ease: 0.022 + Math.random() * 0.018,
       shape: index % 14 === 0,
@@ -111,3 +154,4 @@ hero.addEventListener("pointerleave", () => {
 resizeCanvas();
 createParticles();
 drawParticles();
+typeName();

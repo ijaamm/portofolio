@@ -26,7 +26,7 @@
         <ul class="navbar__links">
           <li><a href="#beranda">Beranda</a></li>
           <li><a href="#tentang">Tentang</a></li>
-          <li>
+          <li class="navbar__actions">
             <details class="contact-dropdown">
               <summary>Kontak</summary>
               <ul>
@@ -36,11 +36,15 @@
                     href="https://wa.me/6281291605094"
                     target="_blank"
                     rel="noopener noreferrer"
-                    >WhatsApp</a
                   >
+                    WhatsApp
+                  </a>
                 </li>
               </ul>
             </details>
+            <a class="download-button" href="assets/cv.pdf" download
+              >Download CV</a
+            >
           </li>
         </ul>
       </nav>
@@ -52,7 +56,10 @@
         <div class="hero__content">
           <div class="hero__copy">
             <p class="hero__eyebrow">Halo, saya</p>
-            <h1>Ilzam Roin Musyafa</h1>
+            <h1 aria-label="Ilzam Roin Musyafa">
+              <span class="typing-line" data-text="Ilzam Roin"></span>
+              <span class="typing-line" data-text="Musyafa"></span>
+            </h1>
             <p class="hero__description">
               Frontend developer yang membuat pengalaman digital terasa hidup.
             </p>

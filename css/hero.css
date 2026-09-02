@@ -20,7 +20,7 @@
   gap: 80px;
   justify-content: space-between;
   margin: 0 auto;
-  max-width: 1120px;
+  width: 100%;
   min-height: 100vh;
   padding: 80px 24px;
   position: relative;
@@ -28,6 +28,7 @@
 }
 
 .hero__copy {
+  animation: hero-copy-in 800ms 120ms ease-out both;
   max-width: 560px;
 }
 
@@ -35,12 +36,27 @@
   color: var(--primary);
   font-size: 1rem;
   margin-bottom: 14px;
+  margin-left: 100px;
 }
 
 .hero h1 {
   font-family: var(--font-heading);
   font-size: clamp(3.5rem, 9vw, 7rem);
   line-height: 0.95;
+  margin-left: 100px;
+  white-space: nowrap;
+}
+
+.typing-line {
+  display: block;
+  min-height: 0.95em;
+}
+
+.typing-line.is-typing::after {
+  border-right: 3px solid var(--primary);
+  content: "";
+  margin-left: 8px;
+  animation: caret-blink 800ms step-end infinite;
 }
 
 .hero__description {
@@ -48,16 +64,29 @@
   font-size: 1.1rem;
   line-height: 1.7;
   margin-top: 28px;
-  max-width: 420px;
+  max-width: 500px;
+  margin-left: 100px;
+  opacity: 0;
+  transform: translateY(12px);
+  transition:
+    opacity 500ms ease,
+    transform 500ms ease;
+}
+
+.hero__copy.is-name-typed .hero__description {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .hero__photo-hanging {
+  animation: photo-drop-in 900ms 180ms ease-out both;
   cursor: grab;
   position: relative;
   right: -72px;
   top: -42px;
   touch-action: none;
   z-index: 3;
+  margin-right: 300px;
 }
 
 .hero__photo-hanging.is-dragging {
@@ -135,6 +164,34 @@
   width: 280px;
 }
 
+@keyframes hero-copy-in {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes photo-drop-in {
+  from {
+    opacity: 0;
+    transform: translateY(-34px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes caret-blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
 .hero__photo img {
   border-radius: 50%;
   display: block;
@@ -157,8 +214,15 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .hero__photo {
+  .hero__copy,
+  .hero__photo-hanging,
+  .hero__photo,
+  .typing-line.is-typing::after {
     animation: none;
+  }
+
+  .typing-line.is-typing::after {
+    border-color: var(--primary);
   }
 }
 
