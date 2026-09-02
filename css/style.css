@@ -240,9 +240,10 @@ body {
 .hero__photo-connector {
   background: #111827;
   border: 3px solid #374151;
-  border-radius: 5px;
+  border-bottom: 0;
+  border-radius: 8px 8px 0 0;
   height: 20px;
-  margin: 0 auto;
+  margin: 0 auto -10px;
   position: relative;
   width: 48px;
   z-index: 1;
@@ -250,16 +251,15 @@ body {
 
 .hero__photo-connector::after {
   border: 3px solid #111827;
-  border-bottom: 0;
-  border-radius: 10px 10px 0 0;
+  border-radius: 0 0 8px 8px;
   content: "";
   height: 12px;
   left: 50%;
   position: absolute;
-  top: 14px;
+  top: 12px;
   transform: translateX(-50%);
   width: 22px;
-  z-index: -1;
+  z-index: 1;
 }
 
 .hero__photo {
@@ -267,7 +267,9 @@ body {
   background: #f1f5f9;
   border: 4px solid #111827;
   border-radius: 50%;
-  box-shadow: 0 0 0 3px rgb(37 99 235 / 30%), 0 0 70px rgb(37 99 235 / 28%);
+  box-shadow:
+    0 0 0 3px rgb(37 99 235 / 30%),
+    0 0 70px rgb(37 99 235 / 28%);
   display: flex;
   flex: 0 0 280px;
   height: 280px;
@@ -279,11 +281,6 @@ body {
   transform-origin: top center;
 }
 
-.hero__photo span {
-  color: var(--muted);
-  font-size: 1rem;
-}
-
 .hero__photo img {
   height: 100%;
   object-fit: cover;
@@ -293,12 +290,18 @@ body {
 
 @keyframes hanging-swing {
   0%,
-  100% { transform: rotate(-2deg); }
-  50% { transform: rotate(2deg); }
+  100% {
+    transform: rotate(-2deg);
+  }
+  50% {
+    transform: rotate(2deg);
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .hero__photo { animation: none; }
+  .hero__photo {
+    animation: none;
+  }
 }
 
 @media (max-width: 640px) {
@@ -334,14 +337,23 @@ body {
     width: 210px;
   }
 
-  .hero__photo-hanging::before { height: 52px; top: -52px; }
-  .hero__photo-hanging::after { top: -58px; }
-  .hero__photo-connector { height: 16px; width: 40px; }
-
   .hero__photo-hanging {
     right: 0;
     top: 0;
   }
 
-  .hero__photo-hanging::before { width: 14px; }
+  .hero__photo-hanging::before {
+    height: 52px;
+    top: -52px;
+    width: 14px;
+  }
+
+  .hero__photo-hanging::after {
+    top: -58px;
+  }
+
+  .hero__photo-connector {
+    height: 16px;
+    width: 40px;
+  }
 }

@@ -3,11 +3,15 @@ const hero = document.querySelector(".hero");
 const context = canvas.getContext("2d");
 const pointer = { x: null, y: null, smoothX: null, smoothY: null };
 const particles = [];
+let width = 0;
+let height = 0;
 
 function resizeCanvas() {
   const scale = window.devicePixelRatio || 1;
-  canvas.width = canvas.offsetWidth * scale;
-  canvas.height = canvas.offsetHeight * scale;
+  width = canvas.offsetWidth;
+  height = canvas.offsetHeight;
+  canvas.width = width * scale;
+  canvas.height = height * scale;
   context.setTransform(scale, 0, 0, scale, 0, 0);
 }
 
@@ -17,8 +21,8 @@ function createParticles() {
 
   for (let index = 0; index < count; index += 1) {
     particles.push({
-      x: Math.random() * canvas.offsetWidth,
-      y: Math.random() * canvas.offsetHeight,
+      x: Math.random() * width,
+      y: Math.random() * height,
       vx: (Math.random() - 0.5) * 0.35,
       vy: (Math.random() - 0.5) * 0.35,
       angle: (Math.PI * 2 * index) / count,
@@ -34,7 +38,7 @@ function createParticles() {
 
 function drawParticles() {
   const time = performance.now();
-  context.clearRect(0, 0, canvas.offsetWidth, canvas.offsetHeight);
+  context.clearRect(0, 0, width, height);
 
   if (pointer.x !== null) {
     if (pointer.smoothX === null) {
@@ -62,8 +66,8 @@ function drawParticles() {
       particle.x += particle.vx;
       particle.y += particle.vy;
 
-      if (particle.x < 0 || particle.x > canvas.offsetWidth) particle.vx *= -1;
-      if (particle.y < 0 || particle.y > canvas.offsetHeight) particle.vy *= -1;
+      if (particle.x < 0 || particle.x > width) particle.vx *= -1;
+      if (particle.y < 0 || particle.y > height) particle.vy *= -1;
     }
 
     context.fillStyle = particle.shape
