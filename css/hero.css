@@ -457,33 +457,55 @@
   .hero__content {
     align-items: flex-start;
     flex-direction: column;
-    gap: 52px;
+    gap: 40px;
     justify-content: center;
-    padding-block: 64px;
+    padding: 96px 20px 48px;
   }
 
   .hero__copy {
     width: 100%;
   }
-  .hero h1 {
-    font-size: clamp(2.8rem, 15vw, 4.5rem);
-  }
+
+  .hero__eyebrow,
+  .hero h1,
+  .hero__role,
   .hero__description {
-    font-size: 1rem;
-    margin-top: 20px;
+    margin-left: 0;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.5rem, 11vw, 4rem);
+    white-space: normal;
   }
 
   .hero__role {
     font-size: 0.95rem;
-    margin-left: 0;
+    margin-top: 18px;
+  }
+
+  .hero__description {
+    font-size: 1rem;
+    line-height: 1.6;
     margin-top: 20px;
+    max-width: 100%;
   }
 
   .hero__photo-card {
     align-self: center;
+    border-radius: 16px;
     flex-basis: auto;
     margin-right: 0;
     max-width: 100%;
+    padding: 8px;
     width: 100%;
+  }
+
+  .hero__photo-inner,
+  .hero__photo-inner img {
+    border-radius: 12px;
+  }
+
+  .particle {
+    opacity: 0.5;
   }
 }
