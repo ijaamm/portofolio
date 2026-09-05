@@ -183,3 +183,17 @@ function requestAboutWidthUpdate() {
 window.addEventListener("scroll", requestAboutWidthUpdate, { passive: true });
 window.addEventListener("resize", requestAboutWidthUpdate);
 updateAboutWidth();
+
+if (aboutContent) {
+  const aboutObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+        }
+      });
+    },
+    { threshold: 0.2 },
+  );
+  aboutObserver.observe(aboutContent);
+}
