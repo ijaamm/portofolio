@@ -197,3 +197,34 @@ if (aboutContent) {
   );
   aboutObserver.observe(aboutContent);
 }
+
+const skillsHeading = document.querySelector(".skills__heading");
+const skillsCards = document.querySelectorAll(".skills__card");
+
+if (skillsHeading) {
+  const skillsObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+        }
+      });
+    },
+    { threshold: 0.2 },
+  );
+  skillsObserver.observe(skillsHeading);
+}
+
+if (skillsCards.length > 0) {
+  const cardsObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+        }
+      });
+    },
+    { threshold: 0.1 },
+  );
+  skillsCards.forEach((card) => cardsObserver.observe(card));
+}
