@@ -156,75 +156,39 @@ createParticles();
 drawParticles();
 typeName();
 
-const aboutContent = document.querySelector(".about__content");
-let aboutScrollFrame = null;
+// Intersection Observer for scroll reveal animations
+const revealElements = document.querySelectorAll(
+  ".about__card, .skills__card, .section-header",
+);
 
-function updateAboutWidth() {
-  aboutScrollFrame = null;
-  if (!aboutContent) return;
-
-  const section = aboutContent.closest(".about");
-  const bounds = section.getBoundingClientRect();
-  const viewportProgress = (window.innerHeight - bounds.top) / window.innerHeight;
-  const progress = Math.min(1, Math.max(0, viewportProgress));
-  const availableWidth = section.clientWidth;
-  const startingWidth = Math.min(780, availableWidth);
-  const currentWidth =
-    startingWidth + (availableWidth - startingWidth) * progress;
-
-  aboutContent.style.maxWidth = `${currentWidth}px`;
-}
-
-function requestAboutWidthUpdate() {
-  if (aboutScrollFrame !== null) return;
-  aboutScrollFrame = requestAnimationFrame(updateAboutWidth);
-}
-
-window.addEventListener("scroll", requestAboutWidthUpdate, { passive: true });
-window.addEventListener("resize", requestAboutWidthUpdate);
-updateAboutWidth();
-
-if (aboutContent) {
-  const aboutObserver = new IntersectionObserver(
-    (entries) => {
+if ("IntersectionObserver" in window) {
+  const revealObserver = new IntersectionObserver(
+    (entries, observer) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
         }
       });
     },
-    { threshold: 0.2 },
-  );
-  aboutObserver.observe(aboutContent);
-}
-
-const skillsHeading = document.querySelector(".skills__heading");
-const skillsCards = document.querySelectorAll(".skills__card");
-
-if (skillsHeading) {
-  const skillsObserver = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("is-visible");
-        }
-      });
+    {
+      root: null,
+      rootMargin: "0px 0px -40px 0px",
+      threshold: 0.15,
     },
-    { threshold: 0.2 },
   );
-  skillsObserver.observe(skillsHeading);
+
+  revealElements.forEach((el, index) => {
+    // Add subtle inline transition delay for staggered effect
+    if (el.classList.contains("skills__card")) {
+      el.style.transitionDelay = `${(index % 3) * 120}ms`;
+    } else if (el.classList.contains("about__card")) {
+      el.style.transitionDelay = `${(index % 2) * 150}ms`;
+    }
+    revealObserver.observe(el);
+  });
+} else {
+  // Fallback for older browsers
+  revealElements.forEach((el) => el.classList.add("is-visible"));
 }
 
-if (skillsCards.length > 0) {
-  const cardsObserver = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("is-visible");
-        }
-      });
-    },
-    { threshold: 0.1 },
-  );
-  skillsCards.forEach((card) => cardsObserver.observe(card));
-}

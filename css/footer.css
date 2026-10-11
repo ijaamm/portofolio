@@ -1,0 +1,129 @@
+/* ==========================================================================
+   Footer Component - Clean Minimalist Finishing
+   ========================================================================== */
+
+.site-footer {
+  background: #ffffff;
+  border-top: 1px solid var(--border);
+  padding: 60px 24px 36px;
+  position: relative;
+  width: 100%;
+}
+
+.site-footer::before {
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(37, 99, 235, 0.3) 50%,
+    transparent 100%
+  );
+  content: "";
+  height: 1px;
+  left: 0;
+  position: absolute;
+  top: -1px;
+  width: 100%;
+}
+
+.footer__container {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding-bottom: 36px;
+}
+
+.footer__brand {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer__logo {
+  color: var(--secondary);
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.footer__tagline {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.footer__links {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.footer__links a {
+  color: var(--muted);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 180ms ease;
+}
+
+.footer__links a:hover {
+  color: var(--primary);
+}
+
+.footer__top-btn {
+  align-items: center;
+  background: rgba(248, 250, 252, 0.9);
+  border: 1px solid var(--border);
+  border-radius: 50px;
+  color: var(--secondary) !important;
+  display: inline-flex;
+  gap: 8px;
+  padding: 8px 16px;
+  transition:
+    background 180ms ease,
+    border-color 180ms ease,
+    transform 180ms ease,
+    color 180ms ease !important;
+}
+
+.footer__top-btn svg {
+  height: 16px;
+  width: 16px;
+  transition: transform 200ms ease;
+}
+
+.footer__top-btn:hover {
+  background: var(--primary) !important;
+  border-color: var(--primary);
+  color: #ffffff !important;
+  transform: translateY(-2px);
+}
+
+.footer__top-btn:hover svg {
+  transform: translateY(-2px);
+}
+
+.footer__bottom {
+  border-top: 1px solid rgba(226, 232, 240, 0.6);
+  color: var(--muted);
+  font-size: 0.85rem;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding-top: 24px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .footer__container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer__links {
+    gap: 18px;
+  }
+}

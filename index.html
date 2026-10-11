@@ -88,92 +88,798 @@
         </div>
       </section>
       <section class="about" id="about">
-        <div class="about__content">
-          <h2 class="about__heading">About Me</h2>
-          <p class="about__description">
-            Perkenalkan saya <strong>Ilzam Roin Musyafa</strong>, lulusan IT dari
-            <strong>Universitas Muhammadiyah Yogyakarta</strong> yang saat ini fokus mendalami
-            <strong>frontend development</strong>. Saya suka bagian ini karena hasilnya langsung terlihat
-            dan dirasakan oleh pengguna. Saya juga senang mempelajari hal-hal
-            baru dan menantang diri sendiri untuk terus berkembang. <br /><br />Saya
-            percaya penguasaan satu bahasa pemrograman atau framework bukan
-            patokan utama dalam bekerja, yang saya utamakan adalah kemampuan
-            untuk memahami konsep, beradaptasi dan terus belajar sesuai
-            kebutuhan proyek.
-          </p>
+        <div class="about__container">
+          <div class="section-header">
+            <span class="section-eyebrow">ABOUT ME</span>
+            <h2 class="section-title">
+              Passion for Building Thoughtful Interfaces
+            </h2>
+            <p class="section-subtitle">
+              Mengenal lebih dekat latar belakang, mindset pengembangan, dan
+              prinsip kerja saya dalam membangun antarmuka web modern.
+            </p>
+          </div>
+
+          <div class="about__grid">
+            <!-- Main Story Card (macOS window style matching Hero photo card) -->
+            <div class="about__card about__card--main">
+              <div class="window-bar">
+                <div class="window-controls">
+                  <span class="control-dot control-dot--red"></span>
+                  <span class="control-dot control-dot--yellow"></span>
+                  <span class="control-dot control-dot--green"></span>
+                </div>
+                <div class="window-tab">
+                  <svg
+                    class="tab-icon"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
+                    ></path>
+                    <polyline points="14 2 14 8 20 8"></polyline>
+                  </svg>
+                  <span>about-ilzam.tsx</span>
+                </div>
+                <div class="window-spacer"></div>
+              </div>
+
+              <div class="about__card-content">
+                <p class="about__paragraph">
+                  Perkenalkan saya
+                  <strong class="about__highlight">Ilzam Roin Musyafa</strong>,
+                  lulusan IT dari
+                  <strong class="about__highlight"
+                    >Universitas Muhammadiyah Yogyakarta</strong
+                  >
+                  yang saat ini fokus mendalami
+                  <strong class="about__highlight">Frontend Development</strong
+                  >. Saya sangat menyukai ranah ini karena setiap baris kode
+                  yang ditulis langsung terwujud nyata, dinikmati, dan dirasakan
+                  impresinya oleh pengguna.
+                </p>
+
+                <p class="about__paragraph">
+                  Bagi saya, web bukan sekadar kumpulan komponen fungsional,
+                  melainkan ruang interaksi yang harus terasa responsif, cepat,
+                  elegan, dan intuitif di setiap sentuhan.
+                </p>
+
+                <div class="about__quote-box">
+                  <div class="quote-icon-wrapper">
+                    <svg
+                      class="quote-svg"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                    >
+                      <path
+                        d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"
+                      />
+                    </svg>
+                  </div>
+                  <p class="quote-text">
+                    "Saya percaya penguasaan satu framework bukanlah patokan
+                    mutlak. Yang terpenting adalah kemampuan memahami konsep
+                    fondasi, beradaptasi cepat, dan terus bertumbuh sesuai
+                    kebutuhan proyek."
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Bento Side Cards -->
+            <div class="about__bento-column">
+              <!-- Education Card -->
+              <div class="about__card about__card--bento">
+                <div class="bento-badge-icon">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                    <path d="M6 12v5c3 3 9 3 12 0v-5" />
+                  </svg>
+                </div>
+                <div class="bento-info">
+                  <span class="bento-label">Pendidikan</span>
+                  <h3 class="bento-title">S1 Teknologi Informasi</h3>
+                  <p class="bento-desc">Universitas Muhammadiyah Yogyakarta</p>
+                </div>
+              </div>
+
+              <!-- Focus & Passion Card -->
+              <div class="about__card about__card--bento">
+                <div class="bento-badge-icon bento-badge-icon--blue">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <polygon
+                      points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                    ></polygon>
+                  </svg>
+                </div>
+                <div class="bento-info">
+                  <span class="bento-label">Spesialisasi</span>
+                  <h3 class="bento-title">Modern UI & Web Apps</h3>
+                  <p class="bento-desc">
+                    Fokus pada estetika visual, performa kilat, dan
+                    interaktivitas.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Status Card -->
+              <div class="about__card about__card--bento about__card--status">
+                <div class="status-indicator">
+                  <span class="status-ping"></span>
+                  <span class="status-dot"></span>
+                </div>
+                <div class="bento-info">
+                  <span class="bento-label">Status Saat Ini</span>
+                  <h3 class="bento-title">Open to Opportunities</h3>
+                  <p class="bento-desc">
+                    Siap berkolaborasi untuk proyek freelance & posisi
+                    full-time.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
+
       <section class="skills" id="skills">
         <div class="skills__container">
-          <h2 class="skills__heading">Skills</h2>
+          <div class="section-header section-header--center">
+            <span class="section-eyebrow">TECH STACK</span>
+            <h2 class="section-title">Skills & Technologies</h2>
+            <p class="section-subtitle">
+              Kumpulan teknologi, framework, dan tools yang saya gunakan untuk
+              mewujudkan produk digital berkualitas tinggi.
+            </p>
+          </div>
+
+          <!-- Infinite Tech Marquee (Moving Left to Right) -->
+          <div class="tech-marquee" aria-label="Technologies Marquee">
+            <div class="tech-marquee__track">
+              <!-- Set 1 -->
+              <div class="tech-marquee__item">
+                <svg class="tech-icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    fill="#E34F26"
+                    d="M1.5 0h21l-1.9 21.2L12 24l-8.6-2.8L1.5 0z"
+                  />
+                  <path fill="#EF652A" d="M12 22l7.1-2.3 1.6-17.7H12V22z" />
+                  <path
+                    fill="#FFF"
+                    d="M12 4.9H6.8l.3 3.6h4.9V4.9zm0 6.6H9.3l.3 3.5 2.4.7V17l-4.5-1.3-.3-4.2h4.9v-1z"
+                  />
+                  <path
+                    fill="#EEE"
+                    d="M12 4.9v3.6h4.8l-.4 4.7H12v3.6l4.5-1.3.5-5.9.1-1.1.3-3.6H12z"
+                  />
+                </svg>
+                <span class="tech-name">HTML5</span>
+              </div>
+              <div class="tech-marquee__item">
+                <svg class="tech-icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    fill="#1572B6"
+                    d="M1.5 0h21l-1.9 21.2L12 24l-8.6-2.8L1.5 0z"
+                  />
+                  <path fill="#33A9DC" d="M12 22l7.1-2.3 1.6-17.7H12V22z" />
+                  <path
+                    fill="#FFF"
+                    d="M12 4.9H6.8l.3 3.6h4.9V4.9zm0 6.6H7.4l.3 3.6 4.3 1.2V17l-4.5-1.3-.3-3.5H12v-1z"
+                  />
+                  <path
+                    fill="#EEE"
+                    d="M12 4.9v3.6h4.8l-.4 4.7H12v3.6l4.5-1.3.5-5.9.1-1.1.3-3.6H12z"
+                  />
+                </svg>
+                <span class="tech-name">CSS3</span>
+              </div>
+              <div class="tech-marquee__item">
+                <svg class="tech-icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <rect width="24" height="24" rx="4" fill="#F7DF1E" />
+                  <path
+                    fill="#000"
+                    d="M6 18.5l2.2-1.3c.4.8.8 1.4 1.7 1.4.9 0 1.5-.4 1.5-1.4V11H14v6.2c0 2.2-1.3 3.3-3.4 3.3-1.9 0-3.1-1-3.7-2l-.9.1zm9.4-.3l2.2-1.3c.6 1 1.4 1.7 2.6 1.7 1.1 0 1.8-.6 1.8-1.3 0-.9-.7-1.2-2-1.8l-.7-.3c-2-.9-3.3-2-3.3-3.6 0-1.8 1.4-3.1 3.5-3.1 1.5 0 2.6.5 3.4 1.9l-2.1 1.3c-.4-.7-.9-1-1.4-1-.6 0-1 .4-1 .9 0 .6.4.9 1.4 1.3l.7.3c2.3 1 3.5 2 3.5 3.8 0 2.2-1.7 3.3-3.9 3.3-2.2 0-3.6-1.1-4.3-2.4l-.4-.2z"
+                  />
+                </svg>
+                <span class="tech-name">JavaScript</span>
+              </div>
+              <div class="tech-marquee__item">
+                <svg
+                  class="tech-icon"
+                  viewBox="0 0 24 24"
+                  fill="#06B6D4"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M12.001 4.8c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624C13.666 10.618 15.027 12 18.001 12c3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C16.336 6.182 14.975 4.8 12.001 4.8zm-6 7.2c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624 1.177 1.194 2.538 2.576 5.512 2.576 3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C10.336 13.382 8.975 12 6.001 12z"
+                  />
+                </svg>
+                <span class="tech-name">Tailwind CSS</span>
+              </div>
+              <div class="tech-marquee__item">
+                <svg
+                  class="tech-icon"
+                  viewBox="0 0 24 24"
+                  fill="#7952B3"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M21.6 4.4a3.6 3.6 0 0 0-3-2.4c-2.4-.2-7.2-.2-7.2-.2H6.6a1.8 1.8 0 0 0-1.8 1.8v16.8a1.8 1.8 0 0 0 1.8 1.8h5.2c1.2 0 6.6 0 8.4-1.2a4.8 4.8 0 0 0 2-4.2c0-2-1.2-3.4-2.8-3.9 1.2-.6 2.2-1.8 2.2-3.7 0-2.4-1.2-4.2-2-5zm-11.4.8h3c2.4 0 3.6.8 3.6 2.4 0 1.8-1.4 2.6-3.8 2.6h-2.8V5.2zm4.4 13.6h-4.4v-5.2h4.4c2.6 0 4.2.9 4.2 2.7 0 1.8-1.6 2.5-4.2 2.5z"
+                  />
+                </svg>
+                <span class="tech-name">Bootstrap</span>
+              </div>
+              <div class="tech-marquee__item">
+                <svg
+                  class="tech-icon"
+                  viewBox="0 0 24 24"
+                  fill="#FF2D20"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M8.2 3.5l7.6-4.4 7.6 4.4v8.8L15.8 16.7l-7.6-4.4V3.5zm.9 1.6v6.9l5.8 3.3 5.8-3.3V5.1L14.9 1.8l-5.8 3.3zM.6 8l7.6-4.4v8.8L.6 16.8V8zm1.8 2.1v4.7l4.1 2.4V12.5L2.4 10.1zm6.7 10.4l7.6 4.4 7.6-4.4v-4.4l-7.6 4.4-7.6-4.4v4.4z"
+                  />
+                </svg>
+                <span class="tech-name">Laravel</span>
+              </div>
+              <div class="tech-marquee__item">
+                <svg
+                  class="tech-icon"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  aria-hidden="true"
+                >
+                  <circle cx="12" cy="12" r="2.2" fill="#61DAFB" />
+                  <ellipse
+                    cx="12"
+                    cy="12"
+                    rx="10"
+                    ry="3.8"
+                    stroke="#61DAFB"
+                    stroke-width="1.3"
+                    transform="rotate(0 12 12)"
+                  />
+                  <ellipse
+                    cx="12"
+                    cy="12"
+                    rx="10"
+                    ry="3.8"
+                    stroke="#61DAFB"
+                    stroke-width="1.3"
+                    transform="rotate(60 12 12)"
+                  />
+                  <ellipse
+                    cx="12"
+                    cy="12"
+                    rx="10"
+                    ry="3.8"
+                    stroke="#61DAFB"
+                    stroke-width="1.3"
+                    transform="rotate(120 12 12)"
+                  />
+                </svg>
+                <span class="tech-name">React</span>
+              </div>
+              <div class="tech-marquee__item">
+                <svg
+                  class="tech-icon"
+                  viewBox="0 0 24 24"
+                  fill="#000"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.8 16.7l-6.2-8.3v7.4H9.8V7.3h1.8l6.3 8.4V7.3h1.8v9.4h-1.9z"
+                  />
+                </svg>
+                <span class="tech-name">Next.js</span>
+              </div>
+              <div class="tech-marquee__item">
+                <svg class="tech-icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <defs>
+                    <linearGradient
+                      id="kt-grad-1"
+                      x1="0%"
+                      y1="100%"
+                      x2="100%"
+                      y2="0%"
+                    >
+                      <stop offset="0%" stop-color="#C757BC" />
+                      <stop offset="50%" stop-color="#7F52FF" />
+                      <stop offset="100%" stop-color="#E4485D" />
+                    </linearGradient>
+                  </defs>
+                  <path fill="url(#kt-grad-1)" d="M24 24H0V0h24L12 12z" />
+                </svg>
+                <span class="tech-name">Kotlin</span>
+              </div>
+              <div class="tech-marquee__item">
+                <svg class="tech-icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path fill="#02569B" d="M14.3 0L2.8 11.5l3.6 3.6L21.5 0z" />
+                  <path
+                    fill="#0175C2"
+                    d="M14.3 12.3L7.9 18.7l3.6 3.6 3.6-3.6 6.4-6.4z"
+                  />
+                  <path
+                    fill="#29B6F6"
+                    d="M11.5 22.3l3.6-3.6 3.6 3.6-3.6 3.6z"
+                  />
+                </svg>
+                <span class="tech-name">Flutter</span>
+              </div>
+              <div class="tech-marquee__item">
+                <svg
+                  class="tech-icon"
+                  viewBox="0 0 24 24"
+                  fill="#181717"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"
+                  />
+                </svg>
+                <span class="tech-name">GitHub</span>
+              </div>
+              <div class="tech-marquee__item">
+                <svg class="tech-icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    fill="#0ACF83"
+                    d="M12 24a4 4 0 0 0 4-4v-4h-4a4 4 0 0 0 0 8z"
+                  />
+                  <path
+                    fill="#A259FF"
+                    d="M4 16a4 4 0 0 0 4 4h4v-8H8a4 4 0 0 0-4 4z"
+                  />
+                  <path
+                    fill="#F24E1E"
+                    d="M4 8a4 4 0 0 0 4 4h4V4H8a4 4 0 0 0-4 4z"
+                  />
+                  <path fill="#FF7262" d="M12 4h4a4 4 0 1 0-4-4v4z" />
+                  <path
+                    fill="#1ABCFE"
+                    d="M20 12a4 4 0 1 0-4-4v8a4 4 0 0 0 4-4z"
+                  />
+                </svg>
+                <span class="tech-name">Figma</span>
+              </div>
+
+              <!-- Set 2 (Exact Duplicate for Continuous Loop) -->
+              <div class="tech-marquee__item" aria-hidden="true">
+                <svg class="tech-icon" viewBox="0 0 24 24">
+                  <path
+                    fill="#E34F26"
+                    d="M1.5 0h21l-1.9 21.2L12 24l-8.6-2.8L1.5 0z"
+                  />
+                  <path fill="#EF652A" d="M12 22l7.1-2.3 1.6-17.7H12V22z" />
+                  <path
+                    fill="#FFF"
+                    d="M12 4.9H6.8l.3 3.6h4.9V4.9zm0 6.6H9.3l.3 3.5 2.4.7V17l-4.5-1.3-.3-4.2h4.9v-1z"
+                  />
+                  <path
+                    fill="#EEE"
+                    d="M12 4.9v3.6h4.8l-.4 4.7H12v3.6l4.5-1.3.5-5.9.1-1.1.3-3.6H12z"
+                  />
+                </svg>
+                <span class="tech-name">HTML5</span>
+              </div>
+              <div class="tech-marquee__item" aria-hidden="true">
+                <svg class="tech-icon" viewBox="0 0 24 24">
+                  <path
+                    fill="#1572B6"
+                    d="M1.5 0h21l-1.9 21.2L12 24l-8.6-2.8L1.5 0z"
+                  />
+                  <path fill="#33A9DC" d="M12 22l7.1-2.3 1.6-17.7H12V22z" />
+                  <path
+                    fill="#FFF"
+                    d="M12 4.9H6.8l.3 3.6h4.9V4.9zm0 6.6H7.4l.3 3.6 4.3 1.2V17l-4.5-1.3-.3-3.5H12v-1z"
+                  />
+                  <path
+                    fill="#EEE"
+                    d="M12 4.9v3.6h4.8l-.4 4.7H12v3.6l4.5-1.3.5-5.9.1-1.1.3-3.6H12z"
+                  />
+                </svg>
+                <span class="tech-name">CSS3</span>
+              </div>
+              <div class="tech-marquee__item" aria-hidden="true">
+                <svg class="tech-icon" viewBox="0 0 24 24">
+                  <rect width="24" height="24" rx="4" fill="#F7DF1E" />
+                  <path
+                    fill="#000"
+                    d="M6 18.5l2.2-1.3c.4.8.8 1.4 1.7 1.4.9 0 1.5-.4 1.5-1.4V11H14v6.2c0 2.2-1.3 3.3-3.4 3.3-1.9 0-3.1-1-3.7-2l-.9.1zm9.4-.3l2.2-1.3c.6 1 1.4 1.7 2.6 1.7 1.1 0 1.8-.6 1.8-1.3 0-.9-.7-1.2-2-1.8l-.7-.3c-2-.9-3.3-2-3.3-3.6 0-1.8 1.4-3.1 3.5-3.1 1.5 0 2.6.5 3.4 1.9l-2.1 1.3c-.4-.7-.9-1-1.4-1-.6 0-1 .4-1 .9 0 .6.4.9 1.4 1.3l.7.3c2.3 1 3.5 2 3.5 3.8 0 2.2-1.7 3.3-3.9 3.3-2.2 0-3.6-1.1-4.3-2.4l-.4-.2z"
+                  />
+                </svg>
+                <span class="tech-name">JavaScript</span>
+              </div>
+              <div class="tech-marquee__item" aria-hidden="true">
+                <svg class="tech-icon" viewBox="0 0 24 24" fill="#06B6D4">
+                  <path
+                    d="M12.001 4.8c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624C13.666 10.618 15.027 12 18.001 12c3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C16.336 6.182 14.975 4.8 12.001 4.8zm-6 7.2c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624 1.177 1.194 2.538 2.576 5.512 2.576 3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C10.336 13.382 8.975 12 6.001 12z"
+                  />
+                </svg>
+                <span class="tech-name">Tailwind CSS</span>
+              </div>
+              <div class="tech-marquee__item" aria-hidden="true">
+                <svg class="tech-icon" viewBox="0 0 24 24" fill="#7952B3">
+                  <path
+                    d="M21.6 4.4a3.6 3.6 0 0 0-3-2.4c-2.4-.2-7.2-.2-7.2-.2H6.6a1.8 1.8 0 0 0-1.8 1.8v16.8a1.8 1.8 0 0 0 1.8 1.8h5.2c1.2 0 6.6 0 8.4-1.2a4.8 4.8 0 0 0 2-4.2c0-2-1.2-3.4-2.8-3.9 1.2-.6 2.2-1.8 2.2-3.7 0-2.4-1.2-4.2-2-5zm-11.4.8h3c2.4 0 3.6.8 3.6 2.4 0 1.8-1.4 2.6-3.8 2.6h-2.8V5.2zm4.4 13.6h-4.4v-5.2h4.4c2.6 0 4.2.9 4.2 2.7 0 1.8-1.6 2.5-4.2 2.5z"
+                  />
+                </svg>
+                <span class="tech-name">Bootstrap</span>
+              </div>
+              <div class="tech-marquee__item" aria-hidden="true">
+                <svg class="tech-icon" viewBox="0 0 24 24" fill="#FF2D20">
+                  <path
+                    d="M8.2 3.5l7.6-4.4 7.6 4.4v8.8L15.8 16.7l-7.6-4.4V3.5zm.9 1.6v6.9l5.8 3.3 5.8-3.3V5.1L14.9 1.8l-5.8 3.3zM.6 8l7.6-4.4v8.8L.6 16.8V8zm1.8 2.1v4.7l4.1 2.4V12.5L2.4 10.1zm6.7 10.4l7.6 4.4 7.6-4.4v-4.4l-7.6 4.4-7.6-4.4v4.4z"
+                  />
+                </svg>
+                <span class="tech-name">Laravel</span>
+              </div>
+              <div class="tech-marquee__item" aria-hidden="true">
+                <svg class="tech-icon" viewBox="0 0 24 24" fill="none">
+                  <circle cx="12" cy="12" r="2.2" fill="#61DAFB" />
+                  <ellipse
+                    cx="12"
+                    cy="12"
+                    rx="10"
+                    ry="3.8"
+                    stroke="#61DAFB"
+                    stroke-width="1.3"
+                    transform="rotate(0 12 12)"
+                  />
+                  <ellipse
+                    cx="12"
+                    cy="12"
+                    rx="10"
+                    ry="3.8"
+                    stroke="#61DAFB"
+                    stroke-width="1.3"
+                    transform="rotate(60 12 12)"
+                  />
+                  <ellipse
+                    cx="12"
+                    cy="12"
+                    rx="10"
+                    ry="3.8"
+                    stroke="#61DAFB"
+                    stroke-width="1.3"
+                    transform="rotate(120 12 12)"
+                  />
+                </svg>
+                <span class="tech-name">React</span>
+              </div>
+              <div class="tech-marquee__item" aria-hidden="true">
+                <svg class="tech-icon" viewBox="0 0 24 24" fill="#000">
+                  <path
+                    d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.8 16.7l-6.2-8.3v7.4H9.8V7.3h1.8l6.3 8.4V7.3h1.8v9.4h-1.9z"
+                  />
+                </svg>
+                <span class="tech-name">Next.js</span>
+              </div>
+              <div class="tech-marquee__item" aria-hidden="true">
+                <svg class="tech-icon" viewBox="0 0 24 24">
+                  <defs>
+                    <linearGradient
+                      id="kt-grad-2"
+                      x1="0%"
+                      y1="100%"
+                      x2="100%"
+                      y2="0%"
+                    >
+                      <stop offset="0%" stop-color="#C757BC" />
+                      <stop offset="50%" stop-color="#7F52FF" />
+                      <stop offset="100%" stop-color="#E4485D" />
+                    </linearGradient>
+                  </defs>
+                  <path fill="url(#kt-grad-2)" d="M24 24H0V0h24L12 12z" />
+                </svg>
+                <span class="tech-name">Kotlin</span>
+              </div>
+              <div class="tech-marquee__item" aria-hidden="true">
+                <svg class="tech-icon" viewBox="0 0 24 24">
+                  <path fill="#02569B" d="M14.3 0L2.8 11.5l3.6 3.6L21.5 0z" />
+                  <path
+                    fill="#0175C2"
+                    d="M14.3 12.3L7.9 18.7l3.6 3.6 3.6-3.6 6.4-6.4z"
+                  />
+                  <path
+                    fill="#29B6F6"
+                    d="M11.5 22.3l3.6-3.6 3.6 3.6-3.6 3.6z"
+                  />
+                </svg>
+                <span class="tech-name">Flutter</span>
+              </div>
+              <div class="tech-marquee__item" aria-hidden="true">
+                <svg class="tech-icon" viewBox="0 0 24 24" fill="#181717">
+                  <path
+                    d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"
+                  />
+                </svg>
+                <span class="tech-name">GitHub</span>
+              </div>
+              <div class="tech-marquee__item" aria-hidden="true">
+                <svg class="tech-icon" viewBox="0 0 24 24">
+                  <path
+                    fill="#0ACF83"
+                    d="M12 24a4 4 0 0 0 4-4v-4h-4a4 4 0 0 0 0 8z"
+                  />
+                  <path
+                    fill="#A259FF"
+                    d="M4 16a4 4 0 0 0 4 4h4v-8H8a4 4 0 0 0-4 4z"
+                  />
+                  <path
+                    fill="#F24E1E"
+                    d="M4 8a4 4 0 0 0 4 4h4V4H8a4 4 0 0 0-4 4z"
+                  />
+                  <path fill="#FF7262" d="M12 4h4a4 4 0 1 0-4-4v4z" />
+                  <path
+                    fill="#1ABCFE"
+                    d="M20 12a4 4 0 1 0-4-4v8a4 4 0 0 0 4-4z"
+                  />
+                </svg>
+                <span class="tech-name">Figma</span>
+              </div>
+            </div>
+          </div>
+
           <div class="skills__grid">
+            <!-- 1. Markup & Styling -->
             <div class="skills__card">
-              <div class="skills__icon">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5" />
-                </svg>
+              <div class="skills__card-header">
+                <div class="skills__icon-box">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <polyline points="16 18 22 12 16 6"></polyline>
+                    <polyline points="8 6 2 12 8 18"></polyline>
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="skills__category">Markup & Styling</h3>
+                  <span class="skills__card-subtitle">4 Technologies</span>
+                </div>
               </div>
-              <h3 class="skills__category">Markup & Styling</h3>
               <ul class="skills__list">
-                <li class="skills__item">HTML <span class="skills__level skills__level--proficient">Proficient</span></li>
-                <li class="skills__item">CSS <span class="skills__level skills__level--proficient">Proficient</span></li>
-                <li class="skills__item">Tailwind <span class="skills__level skills__level--proficient">Proficient</span></li>
-                <li class="skills__item">Bootstrap <span class="skills__level skills__level--proficient">Proficient</span></li>
+                <li class="skills__item">
+                  <span class="skills__item-name">HTML5</span>
+                  <span class="skills__level skills__level--proficient"
+                    >Proficient</span
+                  >
+                </li>
+                <li class="skills__item">
+                  <span class="skills__item-name">CSS3 / Modern CSS</span>
+                  <span class="skills__level skills__level--proficient"
+                    >Proficient</span
+                  >
+                </li>
+                <li class="skills__item">
+                  <span class="skills__item-name">Tailwind CSS</span>
+                  <span class="skills__level skills__level--proficient"
+                    >Proficient</span
+                  >
+                </li>
+                <li class="skills__item">
+                  <span class="skills__item-name">Bootstrap</span>
+                  <span class="skills__level skills__level--proficient"
+                    >Proficient</span
+                  >
+                </li>
               </ul>
             </div>
+
+            <!-- 2. Framework & Library -->
             <div class="skills__card">
-              <div class="skills__icon">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M14.25 9.75L16.5 12l-2.25 2.25m-4.5 0L7.5 12l2.25-2.25M6 20.25h12A2.25 2.25 0 0020.25 18V6A2.25 2.25 0 0018 3.75H6A2.25 2.25 0 003.75 6v12A2.25 2.25 0 006 20.25z" />
-                </svg>
+              <div class="skills__card-header">
+                <div class="skills__icon-box">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                    <polyline points="2 17 12 22 22 17"></polyline>
+                    <polyline points="2 12 12 17 22 12"></polyline>
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="skills__category">Framework & Library</h3>
+                  <span class="skills__card-subtitle">5 Frameworks</span>
+                </div>
               </div>
-              <h3 class="skills__category">Scripting/Language</h3>
               <ul class="skills__list">
-                <li class="skills__item">JavaScript <span class="skills__level skills__level--proficient">Proficient</span></li>
+                <li class="skills__item">
+                  <span class="skills__item-name">Laravel</span>
+                  <span class="skills__level skills__level--proficient"
+                    >Proficient</span
+                  >
+                </li>
+                <li class="skills__item">
+                  <span class="skills__item-name">Blade</span>
+                  <span class="skills__level skills__level--proficient"
+                    >Proficient</span
+                  >
+                </li>
+                <li class="skills__item">
+                  <span class="skills__item-name">Inertia.js</span>
+                  <span class="skills__level skills__level--learning"
+                    >Learning</span
+                  >
+                </li>
+                <li class="skills__item">
+                  <span class="skills__item-name">React</span>
+                  <span class="skills__level skills__level--learning"
+                    >Learning</span
+                  >
+                </li>
+                <li class="skills__item">
+                  <span class="skills__item-name">Next.js</span>
+                  <span class="skills__level skills__level--familiar"
+                    >Familiar</span
+                  >
+                </li>
               </ul>
             </div>
+
+            <!-- 3. Scripting & Language -->
             <div class="skills__card">
-              <div class="skills__icon">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M21 7.5l-9-5.25L3 7.5m18 0l-9 5.25m9-5.25v9l-9 5.25M3 7.5l9 5.25M3 7.5v9l9 5.25m0-9v9" />
-                </svg>
+              <div class="skills__card-header">
+                <div class="skills__icon-box">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M4 17l6-6-6-6M12 19h8"></path>
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="skills__category">Scripting & Language</h3>
+                  <span class="skills__card-subtitle">1 Language</span>
+                </div>
               </div>
-              <h3 class="skills__category">Framework/Library</h3>
               <ul class="skills__list">
-                <li class="skills__item">Laravel <span class="skills__level skills__level--proficient">Proficient</span></li>
-                <li class="skills__item">Blade <span class="skills__level skills__level--proficient">Proficient</span></li>
-                <li class="skills__item">Inertia <span class="skills__level skills__level--learning">Learning</span></li>
-                <li class="skills__item">React <span class="skills__level skills__level--learning">Learning</span></li>
-                <li class="skills__item">Next.js <span class="skills__level skills__level--familiar">Familiar</span></li>
+                <li class="skills__item">
+                  <span class="skills__item-name">JavaScript</span>
+                  <span class="skills__level skills__level--proficient"
+                    >Proficient</span
+                  >
+                </li>
               </ul>
             </div>
+
+            <!-- 4. Mobile Development -->
             <div class="skills__card">
-              <div class="skills__icon">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 1.5H8.25A2.25 2.25 0 006 3.75v16.5a2.25 2.25 0 002.25 2.25h7.5A2.25 2.25 0 0018 20.25V3.75a2.25 2.25 0 00-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3" />
-                </svg>
+              <div class="skills__card-header">
+                <div class="skills__icon-box">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <rect
+                      x="5"
+                      y="2"
+                      width="14"
+                      height="20"
+                      rx="2"
+                      ry="2"
+                    ></rect>
+                    <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="skills__category">Mobile Development</h3>
+                  <span class="skills__card-subtitle">2 Technologies</span>
+                </div>
               </div>
-              <h3 class="skills__category">Mobile</h3>
               <ul class="skills__list">
-                <li class="skills__item">Kotlin <span class="skills__level skills__level--familiar">Familiar</span></li>
-                <li class="skills__item">Flutter <span class="skills__level skills__level--learning">Learning</span></li>
+                <li class="skills__item">
+                  <span class="skills__item-name">Kotlin</span>
+                  <span class="skills__level skills__level--proficient"
+                    >Proficient</span
+                  >
+                </li>
+                <li class="skills__item">
+                  <span class="skills__item-name">Flutter</span>
+                  <span class="skills__level skills__level--learning"
+                    >Learning</span
+                  >
+                </li>
               </ul>
             </div>
+
+            <!-- 5. Tools & Workflow -->
             <div class="skills__card">
-              <div class="skills__icon">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M9.53 16.122a3 3 0 00-5.78 1.128 2.25 2.25 0 01-2.4 2.245 4.5 4.5 0 008.4-2.245c0-.399-.077-.78-.22-1.128zm0 0a15.998 15.998 0 003.388-1.62m-5.043-.025a15.994 15.994 0 011.622-3.395m3.42 3.42a15.995 15.995 0 004.764-4.648l3.876-5.814a1.151 1.151 0 00-1.597-1.597L14.146 6.32a15.996 15.996 0 00-4.649 4.763m3.42 3.42a6.776 6.776 0 00-3.42-3.42" />
-                </svg>
+              <div class="skills__card-header">
+                <div class="skills__icon-box">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"
+                    ></path>
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="skills__category">Tools & Workflow</h3>
+                  <span class="skills__card-subtitle">2 Tools</span>
+                </div>
               </div>
-              <h3 class="skills__category">Tools & Workflow</h3>
               <ul class="skills__list">
-                <li class="skills__item">GitHub <span class="skills__level skills__level--proficient">Proficient</span></li>
-                <li class="skills__item">Figma <span class="skills__level skills__level--proficient">Proficient</span></li>
+                <li class="skills__item">
+                  <span class="skills__item-name">GitHub / Git</span>
+                  <span class="skills__level skills__level--proficient"
+                    >Proficient</span
+                  >
+                </li>
+                <li class="skills__item">
+                  <span class="skills__item-name">Figma</span>
+                  <span class="skills__level skills__level--proficient"
+                    >Proficient</span
+                  >
+                </li>
               </ul>
             </div>
           </div>
         </div>
       </section>
     </main>
+
+    <footer class="site-footer">
+      <div class="footer__container">
+        <div class="footer__brand">
+          <a class="footer__logo" href="#home">Portfolio.</a>
+          <p class="footer__tagline">
+            Crafted with precision, passion, and modern web standards.
+          </p>
+        </div>
+        <div class="footer__links">
+          <a href="mailto:ijammusyaf@gmail.com">Email</a>
+          <a
+            href="https://wa.me/6281291605094"
+            target="_blank"
+            rel="noopener noreferrer"
+            >WhatsApp</a
+          >
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#home" class="footer__top-btn" aria-label="Back to top">
+            <span>Back to top</span>
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M12 19V5M5 12l7-7 7 7" />
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© 2026 Ilzam Roin Musyafa. All rights reserved.</p>
+      </div>
+    </footer>
   </body>
 </html>
