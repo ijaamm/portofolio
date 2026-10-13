@@ -158,7 +158,7 @@ typeName();
 
 // Intersection Observer for scroll reveal animations
 const revealElements = document.querySelectorAll(
-  ".about__card, .skills__card, .section-header",
+  ".about__card, .skills__card, .section-header, .project-card",
 );
 
 if ("IntersectionObserver" in window) {
