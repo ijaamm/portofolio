@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script type="module" src="js/partials.js"></script>
+  <title>Portfolio</title>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar" aria-label="Main navigation">
+      <a class="navbar__brand" href="#home">Portfolio</a>
+      <input type="checkbox" id="nav-toggle" class="navbar__toggle" aria-label="Open menu" />
+      <label for="nav-toggle" class="navbar__toggle-label" aria-hidden="true"><span></span><span></span></label>
+      <ul class="navbar__links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li class="navbar__actions">
+          <details class="contact-dropdown">
+            <summary>Contact</summary>
+            <ul>
+              <li><a href="mailto:ijammusyaf@gmail.com">Email</a></li>
+              <li><a href="https://wa.me/6281291605094" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+            </ul>
+          </details>
+          <a class="download-button" href="assets/cv.pdf" download>Download CV</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <template data-partial="partials/hero.html"></template>
+    <template data-partial="partials/about.html"></template>
+    <template data-partial="partials/skills.html"></template>
+    <template data-partial="partials/projects.html"></template>
+  </main>
+  <template data-partial="partials/footer.html"></template>
+</body>
+</html>
