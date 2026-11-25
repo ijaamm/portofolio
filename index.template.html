@@ -3,9 +3,36 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Ilzam Roin Musyafa" />
+  <meta
+    name="description"
+    content="Portfolio Ilzam Roin Musyafa — Web Developer yang membangun antarmuka web modern, responsif, dan cepat dengan Laravel, Blade, dan JavaScript."
+  />
+  <meta name="theme-color" content="#2563eb" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Ilzam Roin Musyafa — Web Developer" />
+  <meta
+    property="og:description"
+    content="Portfolio Ilzam Roin Musyafa — Web Developer yang membangun antarmuka web modern, responsif, dan cepat."
+  />
+  <meta property="og:image" content="assets/photo.png" />
+  <meta property="og:locale" content="id_ID" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Ilzam Roin Musyafa — Web Developer" />
+  <meta
+    name="twitter:description"
+    content="Portfolio Ilzam Roin Musyafa — Web Developer yang membangun antarmuka web modern, responsif, dan cepat."
+  />
+  <meta name="twitter:image" content="assets/photo.png" />
+
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
   <link rel="stylesheet" href="css/style.css" />
   <script type="module" src="js/partials.js"></script>
-  <title>Portfolio</title>
+  <title>Ilzam Roin Musyafa — Web Developer</title>
 </head>
 <body>
   <header class="site-header">
@@ -18,15 +45,9 @@
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
         <li class="navbar__actions">
-          <details class="contact-dropdown">
-            <summary>Contact</summary>
-            <ul>
-              <li><a href="mailto:ijammusyaf@gmail.com">Email</a></li>
-              <li><a href="https://wa.me/6281291605094" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
-            </ul>
-          </details>
-          <a class="download-button" href="assets/cv.pdf" download>Download CV</a>
+          <a class="download-button" href="assets/Ilzam-Roin-Musyafa-CV.pdf" download="Ilzam-Roin-Musyafa-CV.pdf">Download CV</a>
         </li>
       </ul>
     </nav>
@@ -36,6 +57,7 @@
     <template data-partial="partials/about.html"></template>
     <template data-partial="partials/skills.html"></template>
     <template data-partial="partials/projects.html"></template>
+    <template data-partial="partials/contact.html"></template>
   </main>
   <template data-partial="partials/footer.html"></template>
 </body>

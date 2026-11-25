@@ -5,13 +5,12 @@
 .skills {
   background: #ffffff;
   min-height: auto;
-  padding: clamp(72px, 10vw, 120px) 24px clamp(96px, 12vw, 140px);
+  padding: clamp(56px, 7vw, 96px) 24px clamp(64px, 8vw, 104px);
   position: relative;
 }
 
 .skills__container {
   margin: 0 auto;
-  max-width: 1200px;
   position: relative;
   width: 100%;
   z-index: 1;

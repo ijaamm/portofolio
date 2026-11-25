@@ -5,13 +5,12 @@
 .projects {
   background: #ffffff;
   min-height: auto;
-  padding: clamp(80px, 11vw, 140px) 24px clamp(100px, 12vw, 160px);
+  padding: clamp(56px, 7vw, 96px) 24px clamp(64px, 8vw, 112px);
   position: relative;
 }
 
 .projects__container {
   margin: 0 auto;
-  max-width: 1200px;
   position: relative;
   width: 100%;
 }

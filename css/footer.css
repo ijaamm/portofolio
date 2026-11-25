@@ -55,6 +55,44 @@
   font-size: 0.9rem;
 }
 
+.footer__socials {
+  display: flex;
+  gap: 10px;
+  margin-top: 6px;
+}
+
+.footer__social {
+  align-items: center;
+  background: rgba(248, 250, 252, 0.9);
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  color: var(--secondary);
+  display: inline-flex;
+  height: 40px;
+  justify-content: center;
+  text-decoration: none;
+  transition:
+    background 180ms ease,
+    border-color 180ms ease,
+    color 180ms ease,
+    transform 180ms ease;
+  width: 40px;
+}
+
+.footer__social svg {
+  height: 18px;
+  width: 18px;
+}
+
+.footer__social:hover,
+.footer__social:focus-visible {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #ffffff;
+  outline: none;
+  transform: translateY(-2px);
+}
+
 .footer__links {
   align-items: center;
   display: flex;

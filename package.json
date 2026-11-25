@@ -1,0 +1,10 @@
+{
+  "name": "portofolio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static portfolio — modular partials built into a single index.html.",
+  "scripts": {
+    "build": "node build.js",
+    "verify": "node verify.js"
+  }
+}

@@ -5,13 +5,12 @@
 .about {
   background: #ffffff;
   min-height: auto;
-  padding: clamp(96px, 12vw, 150px) 24px;
+  padding: clamp(64px, 8vw, 104px) 24px;
   position: relative;
 }
 
 .about__container {
   margin: 0 auto;
-  max-width: 1200px;
   position: relative;
   width: 100%;
   z-index: 1;
@@ -342,7 +341,7 @@
 
 @media (max-width: 640px) {
   .about {
-    padding: 72px 20px 84px;
+    padding: 56px 20px 64px;
   }
 
   .about__card-content {
